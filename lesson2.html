@@ -83,11 +83,77 @@ print("Hi " + name + ".  It's good to meet you!")
 you are using Python 2.  Fix this by choosing File, New, Python 3 Notebook. Or, 
 change <em>input</em> to <em>raw_input</em>.</div>
 
-<p>Now it's your turn to write code! Download the lesson2exercises.ipynb file 
-and upload it to Jupyter.  Click the filename in Jupyter.  Follow 
-the directions inside the file.</p>
+<p>In the previous example, why is the word <em>name</em> printed as <em>name</em> in the second 
+line, but the variable value (<em>Jenny</em>) is printed instead in the third line?  If you're
+not sure, keep reading below.</p>
+
+<p>When <em>name</em> is inside a string (inside a matched pair of double quotes), 
+the letters n-a-m-e are printed out.  But when it's not inside double quotes, 
+the computer understands it as part of your source code, such as a variable, 
+and it interprets it and prints the value stored inside of it instead.</p>
+
+<div class="code">name = "My name is Jenny"
+print(name)
+print("What is my name? " + name)
+</div>
+
+<p>Multiple strings can be combined into one string by putting + between them.  This isn't
+numeric addition.  It's called <strong>concatenation</strong> which means combining one
+after the other.  Here's an example.<br>
+
+<div class="code">alpha = "Alpha"
+bet = "BET"
+text = "example"
+phrase = alpha + bet + text
+print(phrase)
+</div>
+
+<p>If you want to print a number variable next to a string, using string concatenation,
+you have to turn the number into a string first, by wrapping str() around it.  This
+tells the computer you do intend to treat the number as if it's a string.  This is one
+solution to the error "TypeError: Can't convert 'int' object to str implicitly".</p>
+
+<div class="code">words = "Some words"
+num = 3
+print(words + str(num))
+</div>
+
+<p>The other solution is to use a comma in the print statement instead, like this.</p>
+
+<div class="code">words = "Some words"
+num = 3
+print(words, num)
+</div>
+
+
+<h2>Practice Exercises</h2>
+<div>You've learned about variables, strings, and math.  Now it's your turn to write code! 
+Download the lesson2exercises.ipynb file and upload it to Jupyter.  Click the 
+filename in Jupyter.  Follow the directions inside the file.</div>
 
 <div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson2.ipynb">Save Link As: lesson2exercises.ipynb</a></div>
+
+<h2>Review</h2>
+<h3>Variables: Learning Goals</h3>
+<ol>
+<li>Create number and text variables.</li>
+<li>Give variables meaningful names.</li>
+<li>Do math with variables and save the results.</li>
+<li>Get input from the keyboard.</li>
+<li>Print the values of variables alone and with other text.</li>
+<li>Recognize string concatenation.</li>
+</ol>
+
+<h3>Variables: Concept Summary</h3>
+<ol>
+<li>Variables name a location in computer memory that stores a value.</li>
+<li>Assign a value to a variable to change what's held inside it.</li>
+<li>Input prompts the user to enter information. Whatever the user types is assigned to a variable.</li>
+<li>Math can be done with + addition, - subtraction, * multiplication, and / division.</li>
+<li>You can also use + to combine text strings one after the other.</li>
+<li>Use print to show the value of a variable.</li>
+<li>Text inside "double quotes" gets treated as text, not as variables.  It's printed as-is.</li>
+</ol>
 
 <div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lesson4.html">Next Lesson</a></div>
 
