@@ -8,12 +8,88 @@
 
 <h1>Variables</h1>
 
+<p>To save a number or word, we have to give it a name.  The name is
+called a <strong>variable</strong> because its value can vary; it can
+change over time.  Here are some variables and their values.</p>
+
+<div class="code">x = 10
+y = 20
+name = "Jenny"
+firstLetter = "J"
+howManyApples = 5
+</div>
+
+<p>When you set a variable's value, that is called <strong>assigning</strong> a value to the variable.</p>
+
+<p>The + symbol does addition and - does subtraction.  What value does the <strong>total</strong> variable hold?  
+Copy-paste into Jupyter and run it.  Were you right?</p>
+
+<div class="code">total = 2 + 4 + 3 - 1
+print(total)
+</div>
+
+<p>The / symbol does division, like a fraction would.  What value does the <strong>average</strong> 
+variable hold?  Copy-paste into Jupyter and run it.  Were you right?</p>
+
+<div class="code">average = (5 + 6 + 6 + 3) / 4
+print(average)
+</div>
+
+<p>The * symbol does multiplication.  In this example, a customer is buying 3 loaves of bread
+which cost $1.99 each.  The sales tax is 5%.  What is the total price of their order?
+Copy-paste into Jupyter and run it.  Were you right?</p>
+
+<div class="code">howMany = 3
+priceEach = 1.99
+salesTaxPercent = 0.05
+totalPrice = (howMany * priceEach) + (salesTaxPercent * (howMany * priceEach))
+print(totalPrice)
+</div>
+
+<p>The <strong>counter</strong> variable demonstrates that the variable's value can be reassigned:
+you can keep assigning new values to it.  It remembers only the last value.</p>
+
+<div class="code">counter = 0
+counter = 1
+counter = 2
+counter = 3
+counter = 4
+print(counter)
+</div>
+
+<p>Here's another example of assigning new values.  Can you guess what it prints?  Try it.</p>
+<div class="code">counter = 7
+counter = 5
+counter = 100
+print(counter)
+counter = 3
+counter = -42
+print(counter)
+</div>
+
+<p>The next example uses String variables.  <strong>String</strong> means text - letters, punctuation, words, 
+and sentences.  The name comes from "a string of letters" like an <a href="https://www.google.com/search?q=alphabet+bead+bracelet&espv=2&biw=1047&bih=665&source=lnms&tbm=isch&sa=X&ved=0CAcQ_AUoAmoVChMIstrbhMT5xgIVgZQNCh3Xuwce">alphabet bead bracelet</a>.  A single letter or punctuation mark is called a <strong>character</strong>.  A string is a way to put together many
+characters, to represent human text.  Any value inside "double quote marks" is a string.</p>
+
+<p>Run this code example.  What does it do?</p>
+
+<div class="code">print("Good morning!")
+name = input("What is your name? ")
+print("Hi " + name + ".  It's good to meet you!")
+</div>
+
+<div class="note">Note: If you get an error like "NameError: name 'Jenny' is not defined" then 
+you are using Python 2.  Fix this by choosing File, New, Python 3 Notebook. Or, 
+change <em>input</em> to <em>raw_input</em>.</div>
+
+<p>Now it's time for challenges! Download the lesson2exercises.ipynb file 
+and upload it to Jupyter.  Click the filename in Jupyter.  Follow 
+the directions.</p>
+
+<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lesson2.ipynb">Save Link As: lesson2exercises.ipynb</a></div>
 
 
 <div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lesson4.html">Next Lesson</a></div>
-
-
-
 
 </body>
 </html>

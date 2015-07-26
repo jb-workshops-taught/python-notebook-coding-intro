@@ -29,4 +29,12 @@ img {
   margin: 8px;
   border: 1px solid #CCCCCC;
 }
+.note {
+  background-color: #FFFFCC;
+  border: 1px solid #FFFF00;
+  width:70%;
+  margin: 20px;
+  padding: 10px;
+  font-size: medium;
+}
 
