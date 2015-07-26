@@ -1,0 +1,32 @@
+body {
+  padding: 20px;
+  padding-bottom: 100px;
+  background-color: #DDDDED;
+  font-size: large;
+}
+p, h1, h2, h3, div, span, ol, li {
+  font-family: sans-serif;
+}
+h1 {
+  counter-reset: paragraphNumber;
+}
+
+.code {
+  white-space: pre;
+  font-family: monospace;
+  background-color: white;
+  max-width: 80%;
+  min-width: 400px;
+  border: 1px solid #DDDDDD;
+  padding: 15px;
+}
+p:before {
+  counter-increment: paragraphNumber;
+  content: counter(paragraphNumber) ". ";
+}
+img {
+  padding: 3px;
+  margin: 8px;
+  border: 1px solid #CCCCCC;
+}
+
