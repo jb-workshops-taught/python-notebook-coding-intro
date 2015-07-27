@@ -6,30 +6,159 @@
 <body>
 <div><a href="index.html">Back to Start</a></div>
 
-<h1>Lesson Title</h1>
+<h1>Functions</h1>
+
+<p>Sometimes, in code, we have several steps that we want to reuse.  We can do this by
+creating a <strong>function</strong>.  A function is a named set of steps.  To define a function, you
+put <em>def</em> and then its name, followed parentheses ().  If the function needs
+a variable, you list the variable inside the parentheses.<br><br>
+
+Run this example.  What does it print?  Why does it print that?</p>
+
+<div class="code">
+def hokeypokey(limb):
+    print("You put your " + limb +" in,")
+    print("You put your " + limb + " out,")
+    print("You put your " + limb +" in,")
+    print("and you shake it all about.")
+    print("You do the hokey pokey and you turn yourself around,")
+    print("and that's what it's all about!")
+    print("")
+    
+print("Let's dance!!")
+print("")
+hokeypokey("left hand")
+hokeypokey("right hand")
+hokeypokey("left foot")
+hokeypokey("right foot")
+hokeypokey("head")
+</div>
+
+<p>The first line of code that actually runs is 
+<span style="font-family: monospace;">print("Let's dance!!")</span>. After that (and the blank line)
+then we <strong>call</strong> a function named hokeypokey that takes a string variable for body part.<br><br>
+
+The indented lines of code above define the steps in the hokeypokey() function, but they don't run 
+until they are told to.  To tell the function to run its code, you have to type 
+<span style="font-family: monospace;">hokeypokey("some body part")</span>.  This 
+is referred to as <strong>calling</strong> the function.</p>
+
+<p>Go to the next box in Jupyter after the code above.  Try running the following.
+What does it do?</p>
+
+<div class="code">hokeypokey("zzzzzzz")
+</div>
+
+<p>Go to the next box in Jupyter after the code above.  Try running the following.
+What does it do?</p>
+
+<div class="code">hokeypokey()
+</div>
+
+<p>Try putting this in an empty box in Jupyter and running it.  What does it do?</p>
+
+<div class="code">
+def hokeypokey(limb):
+    print("You put your " + limb +" in,")
+    print("You put your " + limb + " out,")
+    print("You put your " + limb +" in,")
+    print("and you shake it all about.")
+    print("You do the hokey pokey and you turn yourself around,")
+    print("and that's what it's all about!")
+    print("")
+</div>
+
+<p>A function can also be used with numbers, and with any number of 
+variables as <strong>input parameters</strong>.  Just like you saw 
+above, the variable's value is set when the function is called.  So
+here, the first call makes a=1, b=2, c=3.  The second call makes 
+a=10, b=10, c=10.  And the third call makes a=1, b=1, c=1.<br><br>
+
+A <strong>return value</strong> is the value that the function sends
+back after it's done.  It takes the place of the function call, just as
+if the function call itself were a variable.<br><br>
+
+What does this function do? Run it.  Did it match your intuition?</p>
+
+<div class="code">def mystery(a, b, c):
+    return(a + b + c)
+
+testValue = mystery(1, 2, 3)
+print("Test value is ", testValue)
+
+print(mystery(10, 10, 10))
+print(mystery(1, 1, 1))
+</div>
+
+<p>Notice that when you pass values to a function for its input 
+parameters, the names don't have to match up.  The only thing that
+matters is what order you put them in.<br><br>
+
+What does this code print?  Try to figure it out on paper first.  
+Watch the functions and return values carefully.</p>
+
+<div class="code">def mult(a, b):
+    return a * b
+
+def sub(first, second):
+    return first - second
+
+def half(num):
+    return num / 2
+
+
+x = 50
+y = 10
+print(sub(half(mult(x, y)), x))
+</div>
+
+<div style="margin: 10px;">If you need hints and the solution, slowly highlight the text in this gray box from top to bottom.</div>
+<div class="hint"><pre>Work from the middle out.
+print(sub(half(mult( x,  y)),  x))
+print(sub(half(mult(50, 10)),  x))
+print(sub(half(   500      ),  x))
+print(sub(        250       ,  x))
+print(sub(        250       , 50))
+print(            200            )
+</pre>
+</div>
+
+
 
 
 <h1>Review</h1>
 
 <h2>Practice Exercises</h2>
-<div>You've learned about ...
-Now it's your turn to write code!  Download the lessonNexercises.ipynb 
+<div>You've learned about functions, input parameters, and (optional) return values.
+Now it's your turn to write code!  Download the lesson4exercises.ipynb 
 file and upload it to Jupyter.  Click the filename in Jupyter.  Follow the directions 
 inside the file.</div>
 
-<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lessonNexercises.ipynb">Save Link As: lessonNexercises.ipynb</a></div> 
+<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson4exercises.ipynb">Save Link As: lesson4exercises.ipynb</a></div> 
 
-<h2>If Statements: Learning Goals</h2>
+<h2>Functions: Learning Goals</h2>
 <ol>
-<li></li>
+<li>Be able to define functions.</li>
+<li>Know how to call a function.</li>
+<li>Know how to use input parameters in both the definition and the call.</li>
+<li>Know how to return a value.</li>
+<li>Recognize when a return value is not useful (hokeypokey!).</li>
+<li>Be able to work with function calls nested inside other function calls.</li>
 </ol>
 
-<h2>If Statements: Concepts Summary</h2>
+<h2>Functions: Concepts Summary</h2>
 <ol>
-<li></li>
+<li>A function is a named set of steps.</li>
+<li>An input parameter is a variable passed to the function to give it information it needs.</li>
+<li>A return value comes back from the function when it finishes running, and takes its place in 
+the calling code.</li>
+<li>A function definition includes only the indented lines immediately beneath it.</li>
+<li>Function definitions can include any code, including indented if blocks, just like you would 
+use anywhere else.  They can even call other functions.</li>
+<li>When functions have nested calls, start in the middle to work out the value.</li>
 </ol>
 
-<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lessonX.html">Next Lesson</a></div>
+<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lesson5.html">Next Lesson</a></div>
 
 </body>
 </html>
