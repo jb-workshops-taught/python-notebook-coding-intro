@@ -125,16 +125,34 @@ num = 3
 print(words, num)
 </div>
 
+<p>If you want the person to type in a number, you can use input(), but you need an 
+extra step.  int() is the opposite of str().  It converts from a string to a number.
+If you forget int() you will see either "TypeError: Can't convert 'int' object to str implicitly"
+or you will see "TypeError: unsupported operand type(s) for -: 'str' and 'int'".<br><br>
+
+In either case, <strong>casting</strong> the string as an integer number will let you
+do math with it.</p>
+
+<div class="code">num = input("Type a number: ")
+
+bigger = int(num) + 1
+print("The next bigger number is ", bigger)
+
+smaller = int(num) - 2
+print("Two smaller is ", smaller)
+</div>
+
+<h1>Review</h1>
 
 <h2>Practice Exercises</h2>
 <div>You've learned about variables, strings, and math.  Now it's your turn to write code! 
 Download the lesson2exercises.ipynb file and upload it to Jupyter.  Click the 
 filename in Jupyter.  Follow the directions inside the file.</div>
 
-<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson2.ipynb">Save Link As: lesson2exercises.ipynb</a></div>
+<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson2exercises.ipynb">Save Link As: lesson2exercises.ipynb</a></div>
 
-<h2>Review</h2>
-<h3>Variables: Learning Goals</h3>
+
+<h2>Variables: Learning Goals</h2>
 <ol>
 <li>Create number and text variables.</li>
 <li>Give variables meaningful names.</li>
@@ -142,9 +160,10 @@ filename in Jupyter.  Follow the directions inside the file.</div>
 <li>Get input from the keyboard.</li>
 <li>Print the values of variables alone and with other text.</li>
 <li>Recognize string concatenation.</li>
+<li>Recognize when you may need to cast between string and int.</li>
 </ol>
 
-<h3>Variables: Concept Summary</h3>
+<h2>Variables: Concept Summary</h2>
 <ol>
 <li>Variables name a location in computer memory that stores a value.</li>
 <li>Assign a value to a variable to change what's held inside it.</li>

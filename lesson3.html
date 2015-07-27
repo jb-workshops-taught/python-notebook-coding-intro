@@ -6,7 +6,212 @@
 <body>
 <div><a href="index.html">Back to Start</a></div>
 
-<h1>Variables</h1>
+<h1>If Statements and Troubleshooting</h1>
+
+<p>What if we want to make the computer say something different, depending
+on what the user at the keyboard typed in?  How do we do that?  Try this
+example.  What does it do?</p>
+
+<div class="code">time = input("Is it morning or night? ")
+if(time == "morning"):
+    print("Good morning!")
+else:
+    print("Have a great night.")
+</div>
+
+<P>Notice how we use a single = when we're <strong>assigning</strong> a variable's value, but
+we use a double == (two equal signs in a row) when we're <strong>comparing</strong>
+two values to ask the question, "Are these equal? Are they the same?"</p>
+
+<p>The comparison gives us a true/false or yes/no answer.  That's called a <strong>boolean</strong> value.
+Here are some variables that hold boolean values.  What does this code print?  Why?</p>
+
+<div class="code">a = 5
+b = 5
+
+same = (a == b)
+print("Are they the same? ", same)
+
+greater = (a > b)
+print("Is a greater than b? ", greater)
+
+lesser = (a < 9)
+print("Is a less than 9? ", lesser)
+
+</div>
+
+<p>Let's look at a longer version of the first example (below).  When the user types 
+in "morning", then the first <strong>block of code</strong> indented inside 
+the <strong>if statement</strong> will run.  This is because the (time == "morning") 
+<strong>condition</strong> is true.  When the if condition is true, the first 
+indented block runs; otherwise, the else indented block runs.<br><br>
+
+The final line is not indented, so it's not part of the if-else statement.  
+No matter what the if statement does, the last line prints anyway.<br><br>
+
+Try running it. The first time, put in morning, and watch what it prints.  Run it
+again and put in night, and watch what it prints.  What is the same both 
+times? What is different?<br><br>
+
+Modify it to add an extra print statement to the night message that doesn't show up 
+if you type in morning.</p>
+
+<div class="code">time = input("Is it morning or night? ")
+if(time == "morning"):
+    print("Good morning!")
+    print("I so enjoy the beginning of the day.")
+else:
+    print("Have a great night.")
+print("It was nice to meet you.")
+</div>
+
+<p>You use if statements to make decisions in code.  Here's an example.  Read slowly 
+through the code.  What do you understand?  What's new or unfamiliar?  How does
+the logic work?  Can you work the math with paper and pencil to prove the code right or wrong?</p>
+
+<div class="code">print("I want to buy candy for my friends.  I have 50 cents available.")
+print("If I can buy at least 5 candies, then I will buy candy. But if I can't")
+print("buy enough for all 5 of my friends, then I won't buy any candy.")
+print("")
+
+money = 50
+candyPieces = 0
+
+priceText = input("How many cents does each piece of candy cost? ")
+priceEach = int(priceText)
+
+print("")
+if (money / priceEach >= 5):
+    print("I have enough! I will buy the candy.")
+    candyPieces = money // priceEach
+    money = money - (candyPieces * priceEach)
+else:
+    print("I can't make everyone happy.  I won't buy the candy.")
+
+print("I have this much money left: ", money)
+print("I have this many pieces of candy: ", candyPieces)
+</div>
+
+<p>Using the same example, here is a table showing the results of a
+few different candy prices.  See if you can figure out what // is doing.  Try
+changing it to just one / and rerun the code, comparing to this chart.  Try
+several difference prices.  What's different?  Change it back to // and run again.</p>
+
+<table bgcolor="white" border="1" cellspacing="0" cellpadding="3" style="text-align: center;">
+<tr><th>Price&nbsp;Each</th><th>Candies</th><th>Pennies Spent</th><th>Pennies Left</th></tr>
+<tr><td>1&cent;</td><td>50</td><td>50</td><td>0</td></tr>
+<tr><td>2&cent;</td><td>25</td><td>50</td><td>0</td></tr>
+<tr><td>3&cent;</td><td>16</td><td>48</td><td>2</td></tr>
+<tr><td>4&cent;</td><td>12</td><td>48</td><td>2</td></tr>
+<tr><td>5&cent;</td><td>10</td><td>50</td><td>0</td></tr>
+<tr><td>6&cent;</td><td>8</td><td>48</td><td>2</td></tr>
+<tr><td>7&cent;</td><td>7</td><td>49</td><td>1</td></tr>
+<tr><td>8&cent;</td><td>6</td><td>48</td><td>2</td></tr>
+<tr><td>9&cent;</td><td>5</td><td>45</td><td>5</td></tr>
+<tr><td>10&cent;</td><td>5</td><td>50</td><td>0</td></tr>
+<tr><td>11&cent;</td><td>0</td><td>0</td><td>50</td></tr>
+<tr><td>12&cent;</td><td>0</td><td>0</td><td>50</td></tr>
+<tr><td>13&cent;</td><td>0</td><td>0</td><td>50</td></tr>
+<tr><td>14&cent;</td><td>0</td><td>0</td><td>50</td></tr>
+</table>
+
+<p>You can also use an if statement with only one branch, like this.
+What prints if you run it? If you change the 5 to a 7, what prints?</p>
+
+<div class="code">print("Hello")
+a = 5
+if (a == 7):
+    print("7 is a special number.")
+print("Goodbye")
+</div>
+
+<p>You can nest if statements as well.  Watch the indentation! Run this a 
+few times and type in different answers.  Once you understand it, modify it to 
+add an option for autumn!  (Note: <em>elif</em> is a contraction from "else if".)</p>
+
+<div class="code">time = input("What time of day is it? Answer day or night: ")
+season = input("What season is it? Answer winter, summer, or spring: ")
+print("")
+if (season == "winter"):
+    if(time == "day"):
+        print("Winter in the daytime can be very bright with snow.")
+    else:
+        print("Winter at night is beautiful with moonlight on the snow.")
+elif (season == "summer"):
+    if(time == "day"):
+        print("Summer days are for play!")
+    else:
+        print("Summer nights are warm but not bright.")
+else:
+    if(time == "day"):
+        print("Spring flowers are so colorful in the daytime rain.")
+    else:
+        print("Spring nights are chilly.")
+print("See you later!")
+</div>
+
+<div>You can combine if statements and other code in many ways to accomplish more complex
+decisions and behavior changes.  You'll get more practice with the notebook exercises coming up soon.
+But first, let's figure out what to do when things go wrong!</div>
+
+<h1>Troubleshooting Strategies</h1>
+
+<div>As you work with code, you'll encounter mistakes, typos, and
+misunderstandings.  Some of these will put errors up in your
+face in Jupyter, and others will result in incorrect print output 
+but otherwise no indicator of what went wrong.  How do you find
+the problem?</div>
+
+<p>Use print statements to inspect variables, to find out if they
+really hold the value you think they do.</p>
+
+<p>Break the problem down into smaller steps.  Check your logic on
+each part before bringing the parts together.</p>
+
+<p>Break your code apart into separate boxes, no more than a few
+lines in each one, and run the parts separately (but in the
+correct order).  Print the values you're curious about at the 
+end of each box.  This helps you narrow down where the problem is.</p>
+
+<p>Write your ideas out on paper, step by step, in English.  Make
+sure they are coherent and make sense before you try to write 
+the code to match.</p>
+
+<p>Come up with test values to put in, like we did with candy prices.
+Make sure the math checks out on paper.  Make sure you know how it behaves
+for weird inputs like zero, one, or negative one.<br><br>
+
+(How many candies can you get for zero cents each? Try it.)  Make sure 
+you understand any issues with decimal rounding as well (hint, hint).</p>
+
+
+<h1>Review</h1>
+
+<h2>Practice Exercises</h2>
+<div>You've learned about conditions, if statements, indented blocks, and troubleshooting.  Now it's your 
+turn to write code!  Download the lesson3exercises.ipynb file and upload it to Jupyter.  Click the
+filename in Jupyter.  Follow the directions inside the file.</div>
+
+<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson3exercises.ipynb">Save Link As: lesson3exercises.ipynb</a></div> 
+
+<h2>If Statements: Learning Goals</h2>
+<ol>
+<li>Write if statements to conditionally control code behavior.</li>
+<li>Use comparisons to make boolean variables.</li>
+<li>Learn how indenting controls what code is run for each branch.</li>
+<li>Follow the flow of code through more complex behaviors.</li>
+<li>Learn about troubleshooting strategies.</li>
+</ol>
+
+<h2>If Statements: Concepts Summary</h2>
+<ol>
+<li>An if statement makes a decision based on a true-false condition.</li>
+<li>If the condition is true, the first indented branch runs.</li>
+<li>If the condition is false, the (optional) else branch runs.</li>
+<li>Indenting code is how you indicate which part belongs to the if statement.</li>
+<li>The best way to troubleshoot problems is to work carefully in a small section at a time.</li>
+</ol>
+
 
 
 
