@@ -6,7 +6,81 @@
 <body>
 <div><a href="index.html">Back to Start</a></div>
 
-<h1>Lesson Title</h1>
+<h1>While Loops</h1>
+
+<p>A while loop runs as long as the condition is true.</p>
+
+<div class="code">count = 0
+while (count < 5):
+   print "Still going! ", count
+   count = (count + 1)
+print "All done!"
+</div>
+
+<p>The indented code repeats as long as the comparison at the top of the loop
+remains true.  When the comparison is no longer true, then the loop finishes,
+and the code after the loop runs.</p>
+
+<p>Guess what the code above prints.  Then run it in Jupyter and see if you're right.</p>
+
+<p>You can also use a boolean variable to control the loop, and change the boolean variable's
+value inside the loop while it's running, to stop the loop.</p>
+
+<div class="code">word = ""
+keepGoing = True
+
+print "Guess the magic word."
+while(keepGoing == True):
+    word = input("What is the word? ")
+    if (word == "magic"):
+        print "We love magic!"
+    elif (word == "quit"):
+        keepGoing = False
+    else:
+        print "You typed ", word
+
+print "All done!"
+
+</div>
+
+<p>Run that example.  Try typing in the following words, in order:<br>
+<div class="code">sesame
+apple
+room
+magic
+buzz
+quit
+</div>
+
+<p>What runs before the loop?  What runs after the loop ends?</p>
+
+<P>When does the loop repeat?  When does it stop?</p>
+
+<p>Atalia wants to write an adding machine.  As long as the user of
+the program keeps typing in numbers, the program will keep adding
+them up.  When the user types in zero, then the program ends.  How can
+she use a while loop to write this program?  There are multiple ways
+to do this.  The example below shows one of them.</p>
+
+<div class="code">sum = 0
+number = 1
+while (number != 0):
+    number = input("How much to add? ")
+    sum = sum + number
+    print "Sum is ", sum
+</div>
+<div class="code">How much to add? 3
+Sum is  3
+How much to add? 5
+Sum is  8
+How much to add? 7
+Sum is  15
+How much to add? 1
+Sum is  16
+How much to add? 0
+Sum is  16
+</div>
+
 
 
 <h1>Review</h1>
@@ -19,14 +93,19 @@ inside the file.</div>
 
 <div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lessonNexercises.ipynb">Save Link As: lessonNexercises.ipynb</a></div> 
 
-<h2>If Statements: Learning Goals</h2>
+<h2>While Loops: Learning Goals</h2>
 <ol>
-<li></li>
+<li>Recognize when a loop is a useful strategy.</li>
+<li>Choose a meaningful comparison to control the loop.</li>
+<li>Understand how to apply a while loop to a real situation.</li>
+<li>Make good choices about what goes before the loop, inside the loop, and after the loop.</li>
 </ol>
 
-<h2>If Statements: Concepts Summary</h2>
+<h2>While Loops: Concepts Summary</h2>
 <ol>
-<li></li>
+<li>A while loop repeats the indented set of code as long as the comparison at the top remains true.</li>
+<li>The un-indented lines are not part of the loop.</li>
+<li>Pay attention to what condition triggers the end of the loop.</li>
 </ol>
 
 <div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lessonX.html">Next Lesson</a></div>

@@ -16,10 +16,12 @@ h1 {
   white-space: pre;
   font-family: monospace;
   background-color: white;
-  max-width: 80%;
-  min-width: 400px;
+  min-width: 200px;
+  width: 600px;
+  display: block;
   margin: 10px;
   padding: 15px;
+  overflow: visible;
 }
 p:before {
   counter-increment: paragraphNumber;
