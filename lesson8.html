@@ -6,30 +6,186 @@
 <body>
 <div><a href="index.html">Back to Start</a></div>
 
-<h1>Lesson Title</h1>
+<h1>Text (String) Processing</h1>
 
+<p>A string is a list of characters, and in fact, behind the scenes, it's an array 
+of characters.  Check out these examples.</p>
+
+<div class="code">name = "Jenny"
+print name[1]
+
+# 'e'
+</div>
+
+<p>How would you pull out the word "bet" from "alphabet" below?</p>
+
+<div class="code">word = "alphabet"
+shortie = ""
+for index in range(5,8):
+   shortie = shortie + word[index]
+
+print shortie
+</div>
+
+<p>There's a shortcut for this.  Clipping a piece of a string out of a bigger one
+is called getting a substring (a smaller piece of that string).  In python, this
+can be done with slicing, using the range operator.  In other languages, you would usually 
+call a substring function and give it a start and end location.  Either way, the
+result is the same: you get back another string.  Here's the python example.</p>
+
+<div class="code">word = "alphabet"
+print word[5:8]
+</div>
+
+<p>You can loop through the array of characters and handle them individually.</p>
+
+<div class="code">name = "santa claus"
+upper = ""
+for i in range(0, len(name)):
+    upper = upper + name[i].capitalize()
+print upper
+</div>
+
+
+
+<p>Here's a list of data.  We need to clean it up and split apart the 
+day of week letter from the temperature measurement, so we can use it more effectively.  Let's
+see how we can do that.</p>
+
+<div class="code"># Data cleanup
+data = [ "M75", "T73", "W74", "R72", "F76", "S79", "N76" ]
+
+days = ["", "", "", "", "", "", ""]
+temps = [0, 0, 0, 0, 0, 0, 0]
+
+for i in range(0,7):
+    mixed = data[i]
+    days[i] = mixed[0:1]
+    temps[i] = mixed[1:3]
+    print "Day ", days[i], " had temp ", temps[i]
+</div>
+
+<p>It's really common to read data from a file and then clean it up
+before you can use it for processing.  Sometimes the way the data is structured
+matched a different system, not the one you're writing, and you're just
+borrowing the data.<br><br>
+
+String manipulations are necessary during the cleanup process.  Here are some
+useful tricks. We'll start with counting and indexing.</p>
+
+<div class="code"># String tricks
+sentence = "This is 1 example sentence for string manipulations."
+print sentence
+print "How many e's are in it? ", sentence.count("e")
+
+firste = sentence.find("e")
+print "What's after the first e?", sentence[firste:firste+10]
+</div>
+
+<p>This one explores the function calls.</p>
+
+<div class="code"># String tricks
+
+print "Is the first letter alphabetic? ", sentence[0].isalpha()
+print "Is the 9th letter alphabetic? ", sentence[8].isalpha()
+print "What is the 9th letter? ", sentence[8]
+print "Okay then, is the 9th letter a digit? ", sentence[8].isdigit()
+print "Is the first letter lowercase? ", sentence[0].islower()
+print "Is the 5th letter a space? ", sentence[4].isspace()
+print "\n"
+
+</div>
+
+<p>Python is pretty nice about checking the entire
+string automatically rather than just one character.</p>
+
+<div class="code"># String tricks
+word = "JENNY"
+print "Is the entire word uppercase? ", word.isupper()
+print "\n"
+</div>
+
+<p>You can always replace something inside a string with something else,
+whether it's one letter or an entire substring.  You can also split
+on a specific character or substring, and get back a list of the parts.</p>
+
+<div class="code"># String tricks
+print "What happens if we replace every e with E? "
+print sentence.replace("e", "E")
+
+nametext = "Jenny, Jimmy, Sally, Tonya, Linda, Wu"
+names = nametext.split(",")
+print names
+</div>
+
+<p>You can also check whether a string starts or ends with another string.</p>
+
+
+<div class="code"># String tricks
+if("Sunny".startswith("Sun")):
+    print "Matches"
+
+if("Sunday".endswith("day")):
+    print "Matches"
+</div>
+
+<div>You can find more information on the string functions in the python docs.
+<a href="https://docs.python.org/2/library/stdtypes.html#string-methods">https://docs.python.org/2/library/stdtypes.html#string-methods</a></div>
+
+<p>Here's some data processing.  To read the data, split it into lines, and then 
+split each line on the : to separate the date from the high-low pair.  Then the 
+portion before the H is the daily high temp and the portion before the L is the daily low temp.</p>
+
+<div class="code">data = "2015-07-01:75H65L\n2015-07-02:78H66L\n2015-07-03:77H68L\n2015-07-04:80H69L"
+rows = data.splitlines()
+
+for i in range(0,len(rows)):
+    row = rows[i]
+    # Split returns a list, but we can immediately stick those in variables.
+    (date, temps) = row.split(":")
+    high = temps[0:2]
+    low = temps[3:5]
+    print "Date ", date, " high ", high, " low ", low
+</div>
+<div class="code">
+Date  2015-07-01  high  75  low  65
+Date  2015-07-02  high  78  low  66
+Date  2015-07-03  high  77  low  68
+Date  2015-07-04  high  80  low  69
+</div>
+
+<p>String processing <strong>concepts</strong> are the same in various programming languages, but
+the syntax can be different.  Python makes it particularly easy.  You will find that
+trying to do this in C takes more lines of code and more loops to accomplish it.</p>
 
 <h1>Review</h1>
 
 <h2>Practice Exercises</h2>
-<div>You've learned about ...
-Now it's your turn to write code!  Download the lessonNexercises.ipynb 
-file and upload it to Jupyter.  Click the filename in Jupyter.  Follow the directions 
-inside the file.</div>
+<div>You've learned about string manipulation.  Now it's your turn to write code!  Download 
+the lesson8exercises.ipynb file and upload it to Jupyter.  Click the filename in Jupyter.  
+Follow the directions inside the file.</div>
 
-<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lessonNexercises.ipynb">Save Link As: lessonNexercises.ipynb</a></div> 
+<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson8exercises.ipynb">Save Link As: lesson8exercises.ipynb</a></div> 
 
-<h2>If Statements: Learning Goals</h2>
+<h2>Text Processing: Learning Goals</h2>
 <ol>
-<li></li>
+<li>Understand that strings are arrays of characters that you can loop through.</li>
+<li>Know what a substring is and how to get its value.</li>
+<li>Know the meaning and purpose of split, startswith, and endswith.</li>
+<li>Be able to look at patterns in data and decide where to split apart the data.</li>
 </ol>
 
-<h2>If Statements: Concepts Summary</h2>
+<h2>Text Processing: Concepts Summary</h2>
 <ol>
-<li></li>
+<li>A string is an array of characters.</li>
+<li>String functions may return true/false or substrings.</li>
+<li>You can check the beginning or ending of a string with startswith or endswith.</li>
+<li>Split breaks a string apart on a given character or substring, giving you back a list of the pieces.</li>
+<li>Split is most useful for things like comma-separated lists of values.</li>
+<li>You can pull a substring in python using [a:b] range operator, or in other languages using a substring function.</li>
 </ol>
 
-<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lessonX.html">Next Lesson</a></div>
+<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lesson9.html">Next Lesson</a></div>
 
 </body>
 </html>
