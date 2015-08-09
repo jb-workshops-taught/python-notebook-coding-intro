@@ -6,30 +6,147 @@
 <body>
 <div><a href="index.html">Back to Start</a></div>
 
-<h1>Lesson Title</h1>
+<h1>For Loops and Arrays</h1>
 
+<p>A <strong>for loop</strong> is a convenient way of counting, with fewer lines of code than a while loop.
+Here's an example.</p>
+
+<div class="code"># Python example 
+for counter in range(0, 9):
+    print counter
+print "Done."
+</div>
+
+<p>In python (what you're using right now), for loops work with "range" by walking
+through a list of numbers.  In other languages, for loops work with a comparison just
+like while loops do.  As an example, here's a for loop in C (this won't run in Jupyter).<br><br>
+
+The C for loop has 3 areas.  (create a variable ; check a comparison ; change the value of the variable).
+As long as the condition remains true, the for loop will keep repeating.  (This should sound
+familiar from the while loops.)  With a while loop, you create the variable ahead of the loop, check
+the comparison at the while loop first line, and change the value inside the loop.  A for loop is
+a shortcut way of writing that.
+</p>
+
+<div class="code" style="background-color: #CCCCFF;"># C example (won't run in Jupyter)
+for (int counter = 0; counter < 9; counter++) 
+{
+   printf("%d ", counter)
+}
+</div>
+
+<p>The purpose of a for loop is to count from a starting number to an ending number.  This
+means you know exactly how many times it will go through the loop.  Let's use a bar
+graph as an example.</p>
+
+<div class="code"># Python so you can run it
+bar = ""
+for width in range(0, 12):
+    bar = bar + "#"
+print bar
+</div>
+
+<p>A <strong>for loop</strong> is also commonly used paired with an <strong>array</strong>.  An
+array is a series of variables, all in a row like train cars.  Here's an example.</p>
+
+<div class="code"># Arrays
+children = ["Sally", "Bobby", "Tommy", "Tonya"]
+ages = [12, 9, 7, 5]
+
+print "Sally's age is ", ages[0]
+print "Bobby's age is ", ages[1]
+print "Tommy's age is ", ages[2]
+print "Tonya's age is ", ages[3]
+
+for count in range(0, 4):
+    print "Child ", children[count], " is ", ages[count], " years old."
+</div>
+
+<p>At a specific index (location) in an array, there is a specific value.  In
+the children array, index 0 has value "Sally".  Index 1 has value "Bobby".
+Index 2 has value "Tommy", and index 3 has value "Tonya".  It's common to 
+draw an array on paper with the values inside boxes and the index along the
+bottom.  The name of the array variable goes on the left.
+</p>
+
+<div style="background-color: white; width: 600px; padding: 10px;">
+<table cellpadding="0" cellspacing="0" width="500">
+<tr>
+<td style="" align="right" width="100" height="40" valign="middle">children&nbsp;&nbsp;</td>
+<td style="border: 1px solid black;" align="center" width="70" height="40">"Sally"</td>
+<td style="border: 1px solid black;" align="center" width="70" height="40">"Bobby"</td>
+<td style="border: 1px solid black;" align="center" width="70" height="40">"Tommy"</td>
+<td style="border: 1px solid black;" align="center" width="70" height="40">"Tonya"</td>
+<td style="border: 1px solid black;" align="center" width="70" height="40">&nbsp;</td>
+<td style="border: 1px solid black;" align="center" width="70" height="40">&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+</table>
+</div>
+
+<p>As you've seen, an array is a way of storing a list of related values.  Here's an 
+array of temperatures and the day each high temp occurred.  How would you use a for loop 
+to walk through this list and print the day number and the temperature for each?</p>
+
+<div class="code"># July temperatures
+day   = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+temp  = [81, 82, 80, 75, 74, 80, 78, 75, 72, 74, 76]
+
+# print something like:
+# July 10: High of 81
+# July 11: High of 82
+# ...
+</div>
+
+<p>You can also change the value of an item in the array, by assigning to it just like
+any other variable.</p>
+
+
+<div class="code"># July temperatures
+temp  = [81, 82, 80, 75, 74, 80, 78, 75, 72, 74, 76]
+
+temp[0] = 65
+temp[5] = 72
+</div>
 
 <h1>Review</h1>
 
 <h2>Practice Exercises</h2>
-<div>You've learned about ...
-Now it's your turn to write code!  Download the lessonNexercises.ipynb 
-file and upload it to Jupyter.  Click the filename in Jupyter.  Follow the directions 
+<div>You've learned about for loops and arrays.  Now it's your turn to write code!  Download the 
+lesson6exercises.ipynb file and upload it to Jupyter.  Click the filename in Jupyter.  Follow the directions 
 inside the file.</div>
 
-<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lessonNexercises.ipynb">Save Link As: lessonNexercises.ipynb</a></div> 
+<div style="text-align: center; font-size: 16pt; padding: 30px;"><a href="lesson6exercises.ipynb">Save Link As: lesson6exercises.ipynb</a></div> 
 
-<h2>If Statements: Learning Goals</h2>
+<h2>For Loops and Arrays: Learning Goals</h2>
 <ol>
-<li></li>
+<li>You can create a for loop that counts from and to what you want.</li>
+<li>You can create an array.</li>
+<li>You can read values from an array.</li>
+<li>You can write values to an array.</li>
+<li>You can combine for loops with arrays and printing.</li>
+<li>You can use arrays for storage to make more interesting programs.</li>
 </ol>
 
-<h2>If Statements: Concepts Summary</h2>
+<h2>For Loops and Arrays: Concepts Summary</h2>
 <ol>
-<li></li>
+<li>A for loop counts from a start number to an end number.</li>
+<li>The code inside the for loop runs an exact number of times.</li>
+<li>An array holds a list of related values.</li>
+<li>Create an array by putting a list of values inside square brackets.</li>
+<li>Refer to an item inside the array by using the variable name followed by the position index in square brackets.</li>
+<li>You can assign values into an array just like you read values out of it.</li>
 </ol>
 
-<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lessonX.html">Next Lesson</a></div>
+<div style="text-align: center; font-size: 24pt; padding: 30px;"><a href="lesson7.html">Next Lesson</a></div>
 
 </body>
 </html>
