@@ -40,7 +40,33 @@ print("Is a less than 9? ", lesser)
 
 </div>
 
-<p>Let's look at a longer version of the first example (below).  When the user types 
+<p>Here's a deeper explanation of comparisons.  There are several kinds of comparisons
+that a computer can do.  It can compare whether numbers are the same, less than, or
+greater than.  It can also compare as "less than or equal to" and as "greater than or
+equal to".  Numbers are the easiest to compare, but letters can be compared as well, which
+lets us sort things alphabetically.</p>
+
+<table cellpadding="2" cellspacing="0" border="1" bgcolor="white">
+<tr><th>Comparison</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>a &lt; b</td><td>Is the value of a less than the value of b?</td>
+<td>3 &lt; 4 is true<br>"aaa" &lt; "bbb" is true</td></tr>
+<tr><td>a &gt; b</td><td>Is the value of a greater than the value of b?</td>
+<td>3 &gt; 4 is false<br>"bbb" &gt; "aaa" is true</td></tr>
+<tr><td>a == b</td><td>Is the value of a exactly equal to the value of b?</td>
+<td>3 == 3 is true<br>"aaa" == "aaa" is true</td></tr>
+<tr><td>a &lt;= b</td><td>Is the value of a less than or equal to the value of b?</td>
+<td>3 &lt;= 4 is true<br>4 &lt;= 4 is true<br>"aaa" &lt;= "aaa" is true</td></tr>
+<tr><td>a &gt;= b</td><td>Is the value of a greater than or equal to the value of b?</td>
+<td>3 &gt;= 4 is false<br>4 &gt;= 4 is true<br>"bbb" &gt;= "aaa" is true</td></tr>
+<tr><td>a != b</td><td>Is the value of a not equal to the value of b?</td>
+<td>3 != 4 is true<br>4 != 4 is false<br>"cat" != "dog" is true</td></tr>
+</table>
+
+<p>You'll use those comparison operators a lot.  <strong>Operator</strong> means the
+punctuation marks used to make a comparison, for example, &lt; &gt; == and !=. Eventually
+you will have these memorized, from practicing with them and using them so much.</p>
+
+<p>Now let's look at a longer version of the first example (below).  When the user types 
 in "morning", then the first <strong>block of code</strong> indented inside 
 the <strong>if statement</strong> will run.  This is because the (time == "morning") 
 <strong>condition</strong> is true.  When the if condition is true, the first 
