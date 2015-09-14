@@ -6,10 +6,78 @@
 <body>
 <div><a href="index.html">Back to Start</a></div>
 
+<h1>How do computers understand or work with words and sentences?</h1>
+
+<div>A computer only really stores numbers.  How does it display text if it's all
+numbers inside?  Based on a variable's data type being "character" or "string" it knows that those
+numbers are supposed to represent letters, and it automatically shows you the letter version.
+Let's see how we can work with the details of that.</div>
+
+
+<h1>Characters</h1>
+
+<p>A character is a single letter, space, or punctuation mark.  There are also some characters
+that don't display on screen, but having meaning for the computer, such as newline which is
+represented as \n and tells the computer "move the cursor down one line and all the way to
+the left." Tab, escape, and the arrow keys are also special characters like that.</p>
+
+<p>Inside the computer, each character is represented by a number.  The match between a number
+and a specific character that it represents is called an <strong>encoding</strong>.  One
+such encoding is <a href="http://www.ascii-code.com/">ASCII</a>.  The computer knows to print
+the character to screen, but in its memory, it holds the number instead.  The ASCII number
+for the letter 'a' is 97, while the ASCII number for the letter 'A' is 65.  Click through
+the link above and see if you can figure out the decimal (DEC) ASCII numbers for:</p>
+<ul>
+<li>T</li>
+<li>x</li>
+<li>space</li>
+<li>horizontal tab</li>
+<li>carriage return</li>
+<li>9</li>
+<li>@</li>
+</ul>
+
+
+<p>A string is a list of characters, specifically, an array.  That means one letter after
+another; you'll see a deeper example below.  For now, we're going to think about the ASCII
+values inside it.<br><br>
+
+Let's pretend we're writing a secret code.  We've caught a message from someone
+and need to decipher the message.  Here's what we've got.  Can you figure out the rest, using
+the ASCII chart linked above?  You don't need to program anything; just use a pencil and paper.</p>
+
+<pre>
+  M   e   e   t        m   e 
+ 77 101 101 116  32  109 101  32  97 116  32 116 104 101  32  98  97 114 110  32 97 116  32 56 58 48 48 46
+</pre>
+
+<p>Just for fun... here's a python example for changing between the ASCII number and the character.</p>
+
+<div class="code">
+asciiValue = ord('a')
+print asciiValue
+
+letterValue = chr(97)
+print letterValue
+</div>
+
+<p>There are also encodings other than ASCII.  For example, Unicode UTF-8 provides for
+representation of Chinese characters, Japanese kana and kanji, Korean, and so on.  You
+may have noticed that ASCII only covers European language letters, so for true 
+international programs, software, and websites, we need an encoding that supports
+many other languages.  Working with text encodings is a bit more advanced, so we're
+not covering it here.  If you want to explore this more,
+use a search engine to look up <strong>internationalization</strong> and 
+<strong>localization</strong> in software.</p>
+
+
 <h1>Text (String) Processing</h1>
 
-<p>A string is a list of characters, and in fact, behind the scenes, it's an array 
-of characters.  Check out these examples.</p>
+<p>Now we're going to forget about ASCII for a bit, and work with the actual
+characters instead.</p>
+
+<p>A string is a list of characters; behind the scenes, it's an array.
+Check out these examples.</p>
 
 <div class="code">name = "Jenny"
 print name[1]
@@ -169,6 +237,7 @@ Follow the directions inside the file.</div>
 
 <h2>Text Processing: Learning Goals</h2>
 <ol>
+<li>Know what ASCII encoding is.</li>
 <li>Understand that strings are arrays of characters that you can loop through.</li>
 <li>Know what a substring is and how to get its value.</li>
 <li>Know the meaning and purpose of split, startswith, and endswith.</li>
@@ -177,6 +246,8 @@ Follow the directions inside the file.</div>
 
 <h2>Text Processing: Concepts Summary</h2>
 <ol>
+<li>A character is a letter, digit, punctuation mark, or special indicator.</li>
+<li>Characters can be encoded as ASCII.</li>
 <li>A string is an array of characters.</li>
 <li>String functions may return true/false or substrings.</li>
 <li>You can check the beginning or ending of a string with startswith or endswith.</li>
