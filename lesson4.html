@@ -133,6 +133,30 @@ print(            200            )
 </pre>
 </div>
 
+<h3>Single Responsibility</h3>
+
+<p>How much code should go inside a function?</p>
+
+<p>A good rule of thumb is that a function should have a single responsibility.  It should
+have one job to do, and do that job well, and not worry about any other jobs.  Well, that's
+kind of vague... how do I decide what's one job?  It really depends on the problem you're 
+trying to solve.</p>
+
+<p>Let's say I'm writing code
+to alphabetize a bunch of words.  To put them in order, I need to know which word is 
+alphabetically less than all the other words.  I could write a function to compare one 
+word to a whole list of words... but if I break down the idea into smaller steps, I find out
+that one "step" is to compare just two words, and determine which of the two is earlier
+in the alphabet.  So it would make sense to make a function that compares just two words, and
+returns whichever one comes first in the alphabet.  Then I could write another function that 
+goes through the list of words, and finds the earliest word each time through, to gradually put the
+whole list in order.  One function's entire job is "compare two words" while another function's
+entire job is "run through the list of words".</p>
+
+<p>When you're first learning to program, it's not always obvious where to put that dividing
+line.  Sometimes you have to experiment to see what makes sense.  One limitation to keep in
+mind is that you only get one return value, so whatever your function does, it can only give
+one answer.  So you have to keep its responsibilities very narrow and focused.</p>
 
 
 
