@@ -124,7 +124,7 @@ temp  = [81, 82, 80, 75, 74, 80, 78, 75, 72, 74, 76]
 </div>
 
 <p>You can also change the value of an item in the array, by assigning to it just like
-any other variable.</p>
+any other variable.  This is an important technique, especially when combined with a loop.</p>
 
 
 <div class="code"># July temperatures
@@ -132,6 +132,25 @@ temp  = [81, 82, 80, 75, 74, 80, 78, 75, 72, 74, 76]
 
 temp[0] = 65
 temp[5] = 72
+</div>
+
+<p>Here are some deeper examples of how you can use arrays and loops together
+to get intersting results.</p>
+
+<div class="code"># Add 4 to every number.
+numbers = [10, 20, 30, 40, 50, 60, 70]
+for index in range(0, 6):
+    numbers[index] = numbers[index] + 4
+    print "The value at location ", index, " is value ", numbers[index]
+</div>
+
+<div class="code"># Calculate the average (add them up, then divide)
+numbers = [10, 20, 30, 40, 50, 60, 70]
+sum = 0
+for index in range(0, 6):
+    sum = sum + numbers[index]
+print "The total is ", sum
+print "The average is ", (sum / 7)
 </div>
 
 <h1>Review</h1>
