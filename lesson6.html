@@ -171,6 +171,37 @@ for index in range(0, 10):
     print index, " + ", (10 - index)
 </div>
 
+<p>How do you make an array bigger?  How can you add elements to the array
+after you've filled it up?  Let's look at some examples.</p>
+
+<div class="code">
+# Here's a shortcut to make an array of a certain size without typing it all out.
+mylist = ["A"] * 45
+for index in range(0,45):
+    print index, " is ", mylist[index]
+</div>
+
+<div class="code"># Let's append a few new elements to the end of an array
+mylist = ["A", "B", "C", "D"]
+mylist.append("E")
+mylist.append("F")
+mylist.append(["G", "H"])
+
+for index in range(0,7):
+    print index, " is ", mylist[index]
+</div>
+
+<div class="code"># Here's another variation on that code. Can you spot the 
+# difference compared to the previous example?
+
+mylist = ["A", "B", "C", "D"]
+mylist.append("E")
+mylist.append("F")
+mylist.extend(["G", "H"])
+
+for index in range(0,8):
+    print index, " is ", mylist[index]
+</div>
 
 <h1>Review</h1>
 
