@@ -159,6 +159,34 @@ mind is that you only get one return value, so whatever your function does, it c
 one answer.  So you have to keep its responsibilities very narrow and focused.</p>
 
 
+<h1>Arithmetic: A special kind of function</h1>
+
+<P>You're famiilar with arithmetric; plus (+) for add, minus (-) for subtract,
+star (*) for multiply, and slash (/) for divide.  These are called mathematical
+operators.  The operators are also functions, but they take very specifically two
+numerical parameters, and return one numerical answer.</p>
+
+<p>There's one more mathematical operator you should know about.  It is
+called mod, short for modulus, which means "the remainder that's left over
+after doing division."  Computers use the % symbol for modulus (not for percent, oddly enough).
+For example, 9 divided by 2 is 4 with remainder 1.  So 9 / 2 equals 4, and 9 % 2 equals 1.</p>
+
+<div class="code">a = 9
+b = 4
+print("a divided by b equals ", a / b)
+print("a mod b equals ", a % b)
+</div>
+
+<p>A number that is evenly divisible by another gives a remainder of zero.  
+You can check that the modulus (remainder) is zero to verify that a number was
+evenly divided.  For example:
+<ul>
+<li>6 / 2 = 3 remainder 0</li>
+<li>20 / 5 = 4 remainder 0</li>
+<li>100 / 10 = 10 remainder 0</li>
+<li>10 / 3 = 3 remainder 1 (not divisible!)</li>
+</ul>
+
 
 <h1>Review</h1>
 
