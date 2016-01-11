@@ -3,9 +3,12 @@ FROM jupyter/minimal-notebook
 MAINTAINER Jenny Brown <jennybrown8@gmail.com>
 
 # Dependencies
-pip install numpy
-pip install pandas
-pip install seaborn
+RUN pip install numpy
+RUN pip install scipy
+RUN pip install pandas
+RUN pip install matplotlib
+RUN pip install statsmodels
+RUN pip install seaborn
 
 # Lesson files for Code for Anyone course
 COPY *.ipynb /home/jovyan/work/
