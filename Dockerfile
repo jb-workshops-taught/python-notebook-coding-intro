@@ -1,5 +1,5 @@
 #FROM jupyter/minimal-notebook
-#FROM jupyter/datascience-notebook
+FROM jupyter/datascience-notebook
 
 
 MAINTAINER Jenny Brown <jennybrown8@gmail.com>
