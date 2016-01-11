@@ -3,9 +3,9 @@ FROM jupyter/minimal-notebook
 MAINTAINER Jenny Brown <jennybrown8@gmail.com>
 
 # Lesson files for Code for Anyone course
-COPY *.ipynb /srv/tmpnb/
-COPY *.html /srv/tmpnb/
-COPY *.css /srv/tmpnb/
-COPY TechCrunch.csv /srv/tmpnb/
-COPY README.md /srv/tmpnb/
+COPY *.ipynb /home/jovyan/work
+COPY *.html /home/jovyan/work
+COPY *.css /home/jovyan/work
+COPY TechCrunch.csv /home/jovyan/work
+COPY README.md /home/jovyan/work
 
