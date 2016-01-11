@@ -1,7 +1,7 @@
 body {
   padding: 20px;
   padding-bottom: 100px;
-  background-color: #DDDDED;
+  background-color: #EEEEEE;
   font-size: large;
 }
 p, h1, h2, h3, div, span, ol, li {
@@ -23,10 +23,12 @@ h1 {
   padding: 15px;
   overflow: visible;
 }
+/*
 p:before {
   counter-increment: paragraphNumber;
   content: counter(paragraphNumber) ". ";
 }
+*/
 img {
   padding: 3px;
   margin: 8px;
