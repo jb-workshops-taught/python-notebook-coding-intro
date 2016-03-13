@@ -7,6 +7,7 @@ MAINTAINER Jenny Brown <jennybrown8@gmail.com>
 COPY *.ipynb /home/jovyan/work/
 COPY TechCrunch.csv /home/jovyan/work/
 COPY README.md /home/jovyan/work/
-RUN chown jovyan:users /home/jovyan/work/*
 
+USER root
+RUN chown jovyan:users /home/jovyan/work/*
 USER jovyan
