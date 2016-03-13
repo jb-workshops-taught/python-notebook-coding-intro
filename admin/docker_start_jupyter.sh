@@ -7,7 +7,7 @@ docker run --restart=on-failure:6 --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN
    jupyter/configurable-http-proxy --default-target http://127.0.0.1:9999
 
 docker run --restart=on-failure:6 --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN --name=tmpnb \
-   --memory="10m" \
+   --memory="20m" \
    -v /var/run/docker.sock:/docker.sock jupyter/tmpnb python orchestrate.py --image='codergirl/tmpnb:latest' \
    --command="jupyter notebook --NotebookApp.base_url={base_path} --ip=0.0.0.0 --port {port}" --pool_size='30'
 
