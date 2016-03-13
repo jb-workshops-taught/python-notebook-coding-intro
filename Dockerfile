@@ -4,8 +4,9 @@ FROM jupyter/datascience-notebook
 MAINTAINER Jenny Brown <jennybrown8@gmail.com>
 
 # Lesson files for Code for Anyone course
-USER jovyan
 COPY *.ipynb /home/jovyan/work/
 COPY TechCrunch.csv /home/jovyan/work/
 COPY README.md /home/jovyan/work/
+RUN chown jovyan:users /home/jovyan/work/*
 
+USER jovyan
